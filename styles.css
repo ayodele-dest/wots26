@@ -44,6 +44,9 @@
 @media(max-width:900px){.experience-intro{padding-left:0}.faq{grid-template-columns:1fr}}
 body,button{font-family:'Whyte Inktrap',Arial,sans-serif}
 h1,h2,h3,.lede,.theme-foot blockquote,.mobile-menu,.details-grid dd{font-family:'Whyte Inktrap Super','Whyte Inktrap',Arial,sans-serif!important}
+.mobile-menu,.mobile-menu a{font-family:'Whyte Inktrap Medium','Whyte Inktrap',Arial,sans-serif!important;font-weight:500!important;line-height:1.2!important;letter-spacing:-2px!important}
+.details-grid dd{font-family:'Whyte Inktrap Medium','Whyte Inktrap',Arial,sans-serif!important;font-weight:500!important;line-height:1.2!important;letter-spacing:-2px!important}
+.participate-card a{font-family:'Whyte Inktrap Medium','Whyte Inktrap',Arial,sans-serif!important;font-weight:500!important;line-height:1.2!important;letter-spacing:0!important;white-space:nowrap}
 .gallery-archive{display:block;background:#0e0706;padding:clamp(6rem,10vw,9rem) var(--pad)}
 .gallery-archive .gallery-copy{padding:0 0 clamp(4rem,8vw,7rem);display:grid;grid-template-columns:1.4fr .6fr;gap:5vw;align-items:end}
 .gallery-archive .gallery-copy h2{margin:0}
