@@ -223,3 +223,10 @@ h1,h2,h3,.lede,.theme-title,.participate-intro h2,.participate-card h3,.details-
 .manifesto-pillars span{border:1px solid rgba(24,9,7,.28);border-radius:999px;padding:.62rem .85rem;font-size:.62rem;font-weight:700;line-height:1;text-transform:uppercase;letter-spacing:.12em}
 @media(max-width:900px){.manifesto-copy{min-height:auto;grid-template-columns:1fr;gap:4rem}.lede{font-size:clamp(4rem,13vw,6.5rem)}.body-copy{max-width:600px;margin-left:auto}.vertical-note{display:none}}
 @media(max-width:560px){.manifesto{padding-top:7rem;padding-bottom:6rem}.manifesto-copy{margin:0;gap:3rem}.lede{font-size:clamp(3.6rem,16vw,5rem)}.body-copy{margin:0;padding:1.5rem 0 0;border-left:0;border-top:1px solid rgba(24,9,7,.28)}.body-copy:before{top:-1px;left:0;width:5rem;height:3px}}
+
+/* Experience title and cursor-led image previews */
+.experience-intro{display:flex;justify-content:center;align-items:center;text-align:center;margin-left:auto;margin-right:auto}
+.experience-intro h2{width:min(100%,1180px);margin-left:auto;margin-right:auto;text-wrap:balance}
+.experience-preview{will-change:transform,opacity}
+@media(min-width:901px){.experience-intro h2{white-space:nowrap}.experience-preview img{max-width:min(21vw,280px);max-height:42vh}}
+
