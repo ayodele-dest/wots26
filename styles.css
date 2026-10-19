@@ -119,6 +119,10 @@ footer{grid-template-columns:1fr minmax(280px,1fr) 1fr;gap:clamp(2rem,5vw,5rem)}
   .footer-host{align-items:center}
 }
 
+/* Motion hero with the original artwork retained as a loading fallback */
+.hero-video{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;object-position:center 48%;transform:scale(1.035);animation:heroDrift 14s ease-out both}
+@media(max-width:560px){.hero-video{object-position:center}}
+
 /* Keep photographic content fully visible instead of cropping it */
 .gallery-shot{display:flex;align-items:center;justify-content:center;background:#0e0706}
 .gallery-shot img{object-fit:contain;transform:none!important}
@@ -172,6 +176,12 @@ footer{grid-template-columns:1fr minmax(280px,1fr) 1fr;gap:clamp(2rem,5vw,5rem)}
 .theme-foot{width:100%}
 @media(max-width:560px){.theme-section{background-position:42% center}.theme-title{font-size:clamp(3.6rem,18vw,5.5rem)}}
 
+/* Theme signature and declaration lockup */
+.theme-foot{width:min(100%,1120px);margin:clamp(3.5rem,6vw,5.5rem) auto 0;padding:clamp(1.5rem,2.7vw,2.5rem);grid-template-columns:minmax(220px,.8fr) minmax(360px,1.2fr);gap:clamp(2.5rem,6vw,6rem);align-items:center;border:1px solid rgba(243,231,218,.26);background:rgba(12,4,3,.42);backdrop-filter:blur(5px)}
+.theme-foot .theme-signature{justify-self:start;width:min(100%,300px)}
+.theme-foot blockquote{justify-self:end;width:100%;max-width:540px;font-size:clamp(1.6rem,2.25vw,2.35rem);line-height:1.18;text-wrap:balance}
+@media(max-width:700px){.theme-foot{grid-template-columns:1fr;gap:1.75rem;text-align:center}.theme-foot .theme-signature{justify-self:center;width:min(230px,72vw)}.theme-foot blockquote{justify-self:center;max-width:31rem;font-size:clamp(1.35rem,6vw,1.8rem)}}
+
 .final-actions .final-praise{display:inline-flex;align-items:center;justify-content:center;min-height:48px;background:var(--gold);color:var(--ink);padding:1rem 1.35rem;font-size:.9rem;font-weight:600;line-height:1;letter-spacing:0!important;text-transform:none!important;white-space:nowrap}
 .final-actions #share-button{min-height:48px;font-size:.9rem;font-weight:500;line-height:1}
 @media(max-width:560px){.final-actions .final-praise,.final-actions #share-button{width:100%;justify-content:center}}
@@ -217,8 +227,8 @@ h1,h2,h3,.lede,.theme-title,.participate-intro h2,.participate-card h3,.details-
 .manifesto-copy{position:relative;z-index:1;width:min(100%,1320px);min-height:clamp(520px,51vw,690px);margin:0 auto;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(310px,.62fr);gap:clamp(4rem,9vw,9rem);align-items:center}
 .lede{max-width:830px;margin:0;font-size:clamp(4.4rem,7.25vw,7.4rem)}
 .lede em{display:inline-block;color:var(--ember);font-weight:900;font-style:italic}
-.body-copy{position:relative;max-width:430px;padding:2rem 0 2rem clamp(1.75rem,3vw,3.2rem);border-left:1px solid rgba(24,9,7,.28);font-size:clamp(1rem,1.1vw,1.12rem);line-height:1.72}
-.body-copy:before{content:'';position:absolute;top:0;left:-1px;width:3px;height:5.25rem;background:var(--ember)}
+.body-copy{position:relative;max-width:430px;padding:2rem 0;font-size:clamp(1rem,1.1vw,1.12rem);line-height:1.72}
+.body-copy:before{display:none}
 .manifesto-pillars{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:2.4rem}
 .manifesto-pillars span{border:1px solid rgba(24,9,7,.28);border-radius:999px;padding:.62rem .85rem;font-size:.62rem;font-weight:700;line-height:1;text-transform:uppercase;letter-spacing:.12em}
 @media(max-width:900px){.manifesto-copy{min-height:auto;grid-template-columns:1fr;gap:4rem}.lede{font-size:clamp(4rem,13vw,6.5rem)}.body-copy{max-width:600px;margin-left:auto}.vertical-note{display:none}}
@@ -229,4 +239,36 @@ h1,h2,h3,.lede,.theme-title,.participate-intro h2,.participate-card h3,.details-
 .experience-intro h2{width:min(100%,1180px);margin-left:auto;margin-right:auto;text-wrap:balance}
 .experience-preview{will-change:transform,opacity}
 @media(min-width:901px){.experience-intro h2{white-space:nowrap}.experience-preview img{max-width:min(21vw,280px);max-height:42vh}}
-
+/* Final large-screen proportion and content alignment pass */
+@media(min-width:901px){
+  .manifesto-copy{width:min(100%,1400px);grid-template-columns:minmax(0,1.5fr) minmax(320px,.55fr);gap:clamp(3rem,5vw,6rem)}
+  .lede{font-size:clamp(4.5rem,6.5vw,7.4rem);white-space:nowrap}
+}
+.manifesto:before{left:50%;right:auto;transform:translateX(-50%);text-align:center}
+.lede>span,.lede>em{display:block;white-space:nowrap}
+.experience-intro{width:100%;max-width:none;padding-left:0}
+.experience-intro h2{text-align:center}
+.convener-head{display:flex;justify-content:center;text-align:center}
+.convener-head h2{width:min(100%,1100px);margin-left:auto;margin-right:auto;text-align:center;text-wrap:balance}
+.participate-grid{gap:clamp(.75rem,1.4vw,1.4rem);border:0}
+.participate-card.pastors{background:#28110d;color:var(--cream)}
+.participate-card.praise{background:var(--gold);color:var(--ink)}
+.participate-card+.participate-card{border:0}
+.details-top h2{width:100%;max-width:100%;font-size:clamp(4rem,14vw,13rem)!important;line-height:.88!important;letter-spacing:-2px!important;white-space:nowrap}
+.final-cta h2{font-size:clamp(4.2rem,9vw,9rem);max-width:980px}
+.faq details a,footer a{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.2em}
+.footer-mark,.footer-host{gap:.75rem}
+.footer-mark>a,.footer-host>a,.footer-meta a{font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;opacity:.72}
+@media(max-width:900px){.participate-grid{gap:.75rem}.participate-card+.participate-card{border:0}.details-top h2{font-size:clamp(4rem,17vw,9rem)!important}.final-cta h2{font-size:clamp(4rem,14vw,7rem)}}
+@media(max-width:560px){
+  html,body{overflow-x:hidden}
+  .mobile-menu{visibility:hidden}
+  .mobile-menu.open{visibility:visible}
+  .lede{font-size:clamp(3rem,12.5vw,4.5rem);white-space:normal}
+  .theme-title{width:100%;max-width:100%;font-size:clamp(3.1rem,15vw,4.75rem);line-height:1.02!important}
+  .experience-intro h2{font-size:clamp(3.1rem,13.5vw,4.2rem)}
+  .participate-intro,.participate-intro h2,.participate-intro p{width:100%;max-width:100%;min-width:0}
+  .participate-intro h2{font-size:clamp(3rem,14.5vw,4.5rem)}
+  .details-top h2{font-size:17vw!important;letter-spacing:-1px!important}
+  .final-cta h2{font-size:15vw}
+}
