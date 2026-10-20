@@ -179,10 +179,13 @@ strong,b,button,.desktop-nav,.mobile-menu,.nav-cta,.praise-float,.participate-ca
 .participate-intro{display:grid;grid-template-columns:1.15fr .65fr;gap:clamp(2rem,8vw,8rem);align-items:end;margin-bottom:clamp(3rem,7vw,6rem)}
 .participate-intro h2{margin:0;font-size:clamp(4rem,8vw,8rem);line-height:.82;letter-spacing:-.055em}
 .participate-intro p{margin:0;max-width:430px;line-height:1.7;opacity:.7}
-.participate-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(24,9,7,.3);border-bottom:1px solid rgba(24,9,7,.3)}
+.participate-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid rgba(24,9,7,.3);border-bottom:1px solid rgba(24,9,7,.3)}
 .participate-card{min-height:520px;padding:clamp(2rem,4vw,4rem);display:flex;flex-direction:column;align-items:flex-start}
 .participate-card+.participate-card{border-left:1px solid rgba(24,9,7,.3)}
 .participate-card.praise{background:var(--gold)}
+.participate-card.partnership{background:#e43b18;color:var(--cream)}
+.participate-card.partnership a{background:var(--cream);color:var(--ink)}
+.participate-card.partnership a:hover,.participate-card.partnership a:focus-visible{background:var(--ink);color:var(--cream)}
 .participate-card>span{font-size:.6rem;text-transform:uppercase;letter-spacing:.16em;opacity:.62}
 .participate-card h3{font-size:clamp(2.8rem,5vw,5.5rem);line-height:.88;letter-spacing:-.045em;margin:2.5rem 0 1.5rem}
 .participate-card p{max-width:460px;line-height:1.65;opacity:.72;margin:0 0 3rem}

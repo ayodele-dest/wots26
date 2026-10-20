@@ -24,5 +24,4 @@ const showExperiencePreview=(item,x=innerWidth*.62,y=innerHeight*.28)=>{if(!expe
 const hideExperiencePreview=()=>experiencePreview?.classList.remove('active');
 experienceItems.forEach(item=>{if(precisePointer){item.addEventListener('pointerenter',event=>showExperiencePreview(item,event.clientX,event.clientY));item.addEventListener('pointermove',event=>positionExperiencePreview(event.clientX,event.clientY));item.addEventListener('pointerleave',hideExperiencePreview)}item.addEventListener('focus',()=>showExperiencePreview(item));item.addEventListener('blur',hideExperiencePreview)});
 addEventListener('scroll',hideExperiencePreview,{passive:true});
-document.querySelectorAll('[data-form-placeholder]').forEach(link=>link.addEventListener('click',event=>{event.preventDefault();const kind=link.dataset.formPlaceholder;showToast(kind==='pastors'?'Visiting pastors form coming soon':'Praise Point form coming soon')}));
 
