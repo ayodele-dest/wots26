@@ -137,9 +137,9 @@ footer{grid-template-columns:1fr minmax(280px,1fr) 1fr;gap:clamp(2rem,5vw,5rem)}
 /* Clean footer composition */
 footer{padding:clamp(3rem,5vw,5rem) var(--pad);grid-template-columns:minmax(180px,.7fr) minmax(320px,1.3fr) minmax(180px,.7fr);gap:clamp(2rem,6vw,7rem);align-items:center;border-top:1px solid rgba(243,231,218,.14)}
 .footer-brand img{display:block;width:clamp(145px,14vw,205px);height:auto}
-.footer-copy{display:flex;flex-direction:column;gap:1.5rem;align-items:flex-start}
+.footer-copy{display:flex;flex-direction:column;gap:1.5rem;align-items:center;justify-self:center;text-align:center}
 .footer-copy p{max-width:420px;font-size:.82rem;line-height:1.6;opacity:.72}
-.footer-copy nav{display:flex;flex-wrap:wrap;gap:.65rem 1.25rem}
+.footer-copy nav{display:flex;flex-wrap:wrap;justify-content:center;gap:.65rem 1.25rem}
 .footer-copy nav a{font-size:.63rem;text-transform:uppercase;letter-spacing:.1em;text-decoration:none;opacity:.72;transition:opacity .2s ease}
 .footer-copy nav a:hover,.footer-copy nav a:focus-visible{opacity:1}
 .footer-legal{justify-self:end;text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:1rem}
@@ -329,6 +329,8 @@ h1,h2,h3,.lede,.theme-title,.participate-intro h2,.participate-card h3,.details-
 }
 
 footer .footer-copy a{text-decoration:none}
+footer .footer-copy{justify-self:center;align-items:center;text-align:center}
+footer .footer-copy nav{justify-content:center}
 
 /* Prayer and fasting */
 .prayer-section{position:relative;overflow:hidden;padding:clamp(7rem,11vw,11rem) var(--pad);background:var(--gold);color:var(--ink)}
